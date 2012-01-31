@@ -1,0 +1,133 @@
+<!-- ================================================================================ GPwidget@ Mover ================================================================================ -->
+
+		<key>GPwidgetMover</key>
+		<dict>
+			<key>Actions</key>
+			<array>
+				<string>views.GPwidgetMover2.x = get.views.GPwidgetMover.contentOffsetX / -1 + 552</string>
+				<string>views.GPwidgetMover2.y = get.views.GPwidgetMover.contentOffsetY / -1 + 2836</string>
+				<string>views.GPwidget.x = get.views.GPwidgetMover.contentOffsetX / -1 + 552</string>
+				<string>views.GPwidget.y = get.views.GPwidgetMover.contentOffsetY / -1 + 2836</string>
+				<string>views.GPwidgetMover.x = get.views.GPwidgetMover.contentOffsetX / -1 + 552</string>
+				<string>views.GPwidgetMover.y = get.views.GPwidgetMover.contentOffsetY / -1 + 2836</string>
+				<dict> <!-- ========== bottom limit ============= -->
+					<key>if</key>
+					<array>
+						<string>get.views.GPwidget.x gt= 304</string>
+					</array>
+					<key>then</key>
+					<array>
+						<string>views.GPwidget.x = 304</string>
+						<string>views.GPwidgetMover.x = 304</string>
+						<string>views.GPwidgetMover2.x = 304</string>
+					</array>
+					<key>else</key>
+					<array>
+						<string>nothing</string>
+					</array>
+				</dict>
+
+				<dict> <!-- ========== top limit ============= -->
+					<key>if</key>
+					<array>
+						<string>get.views.GPwidget.x lt= -60</string>
+					</array>
+					<key>then</key>
+					<array>
+						<string>views.GPwidget.x = -50</string>
+						<string>views.GPwidgetMover.x = -50</string>
+						<string>views.GPwidgetMover2.x = -50</string>
+					</array>
+					<key>else</key>
+					<array>
+						<string>nothing</string>
+					</array>
+				</dict>
+
+				<dict> <!-- ========== left limit ============= -->
+					<key>if</key>
+					<array>
+						<string>get.views.GPwidget.y gt= 2652</string>
+					</array>
+					<key>then</key>
+					<array>
+						<string>views.GPwidget.y = 2652</string>
+						<string>views.GPwidgetMover.y = 2652</string>
+						<string>views.GPwidgetMover2.y = 2652</string>
+					</array>
+					<key>else</key>
+					<array>
+						<string>nothing</string>
+					</array>
+				</dict>	
+				
+			</array>
+			<key>ClipToBounds</key><true/>
+			<key>ContentWidth</key><integer>960</integer>
+			<key>ContentHeight</key><integer>3256</integer> <!-- ========== right boundary ============= -->
+			<key>ContentOffsetX</key><integer>508</integer> <!-- ========== minus to down, plus to up ============= -->
+			<key>ContentOffsetY</key><integer>2574</integer> <!-- ========== minus to left, plus to right ============= -->
+			<key>Frame</key><string>50,263,414,414</string>	
+			<key>HorizontalScrollBars</key><false/>
+			<key>Paging</key><false/>
+			<key>ScrollingEnabled</key><true/>
+			<key>UserInteraction</key><false/>
+			<key>VerticalScrollBars</key><false/>
+			<key>ViewType</key><string>ScrollView</string>
+			<key>id</key><string>GPwidgetMover</string>
+		</dict>
+		
+		<key>GPwidgetMover2</key>
+		<dict>
+			<key>Frame</key><string>50,263,414,414</string>
+			<key>Image</key>
+			<string>nothing</string>
+			<key>ViewType</key><string>ImageView</string>
+			<key>id</key><string>GPwidgetMover2</string>
+		</dict>
+		
+		<key>GPwidget</key>
+		<dict>
+			<key>ClipToBounds</key><true/>
+			<key>Frame</key><string>50,263,414,414</string>
+			<key>Rotation</key><integer>-90</integer>
+			<key>Subviews</key>
+			<array>
+				<dict>
+					<key>Actions</key>
+					<array>
+						<string>views.GPwidgetR.URL = $ROOT/Widgets/GooglePlus/Widget.html</string>
+					</array>
+					<key>Frame</key><string>0,372,414,28</string>
+					<key>Image</key>
+					<string>nothing</string>
+					<key>ViewType</key><string>Button</string>
+				</dict>
+				<dict>
+					<key>Frame</key><string>0,0,414,414</string>
+					<key>Image</key>
+					<string>$ROOT/Widgets/GooglePlus/Frame.png</string>
+					<key>ViewType</key><string>ImageView</string>
+				</dict>
+				<dict>
+					<key>ClipToBounds</key>
+					<true/>
+					<key>Frame</key><string>0,72,414,301</string>
+					<key>URL</key>
+					<string>$ROOT/Widgets/GooglePlus/Widget.html</string>
+					<key>UserInteraction</key><true/>
+					<key>ViewType</key><string>AdvWebView</string>
+					<key>id</key><string>GPwidgetR</string>
+				</dict>	
+				<dict>
+					<key>Frame</key><string>0,0,414,414</string>
+					<key>Image</key>
+					<string>$ROOT/Widgets/GooglePlus/BG.png</string>
+					<key>ViewType</key><string>ImageView</string>
+				</dict>
+
+			</array>
+			<key>UserInteraction</key><true/>
+			<key>ViewType</key><string>View</string>
+			<key>id</key><string>GPwidget</string>
+		</dict>
