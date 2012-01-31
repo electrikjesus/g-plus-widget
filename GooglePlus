@@ -1,0 +1,63 @@
+<!-- =================================================== SETTINGS - GooglePlus@ ========================================================== -->		
+
+						<dict>
+							<key>ClipToBounds</key><true/>
+							<key>ContentWidth</key><integer>150</integer>
+							<key>ContentHeight</key><integer>400</integer>
+							<key>ContentOffsetX</key><integer>0</integer>
+							<key>ContentOffsetY</key><integer>0</integer>
+							<key>FrameHeight</key><integer>400</integer>
+							<key>FrameWidth</key><integer>150</integer>
+							<key>FrameX</key><integer>1280</integer>
+							<key>FrameY</key><integer>0</integer>
+							<key>HorizontalScrollBars</key><false/>
+							<key>Paging</key><false/>
+							<key>ScrollingEnabled</key><false/>
+							<key>Subviews</key>
+							<array>	
+								<!--@start widget preview-->
+								<dict>
+									<key>Frame</key><string>0,0,150,150</string>		
+									<key>Image</key>	
+									<string>$ROOT/Images/Widget-GooglePlus.png</string>
+									<key>UserInteraction</key><false/>
+									<key>ViewType</key><string>ImageView</string>
+								</dict>	
+								<!--@end widget preview-->
+								
+								<!--@start add to homescreen button-->
+								<dict>
+									<key>Actions</key>
+									<array>
+										<string>get var widget-GPwidget = 0 ? setvar 1 widget-GPwidget : setvar 0 widget-GPwidget</string>
+										<string>function updateWidgets</string>
+									</array>
+									<key>Frame</key><string>0,180,23,23</string>		
+									<key>Image</key>	
+									<string>nothing</string>
+									<key>UserInteraction</key><true/>
+									<key>ViewType</key><string>Button</string>
+								</dict>
+								<dict>
+									<key>Frame</key><string>0,180,23,23</string>		
+									<key>Image</key>	
+									<string>$ROOT/Images/Box-Checked-No.png</string>
+									<key>UserInteraction</key><false/>
+									<key>ViewType</key><string>ImageView</string>
+									<key>id</key><string>widget-GPwidget-box</string>
+								</dict>								
+								<dict>
+									<key>Frame</key><string>23,180,125,23</string>		
+									<key>Image</key>	
+									<string>$ROOT/Images/Widget-GooglePlus-Text.png</string>
+									<key>UserInteraction</key><false/>
+									<key>ViewType</key><string>ImageView</string>
+								</dict>	
+								<!--@end add to homescreen button-->
+
+							</array>
+							<key>UserInteraction</key><true/>
+							<key>VerticalScrollBars</key><false/>
+							<key>ViewType</key><string>ScrollView</string>
+						</dict>
+						
