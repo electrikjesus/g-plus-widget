@@ -1,0 +1,1 @@
+This is a simple G+ widget for Dreamboard, a popular iOS theming framework. The widget uses simple HTML and is set to pull up the G+ mobile site.
